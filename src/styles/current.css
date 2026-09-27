@@ -1,0 +1,89 @@
+.current {
+  grid-area: current;
+}
+
+.current__weather {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-block-end: 20px;
+  padding: 40px 24px;
+  background-image: url("/assets/images/bg-today-small.svg");
+  background-repeat: no-repeat;
+  background-color: var(--c-blue-700);
+  background-size: cover;
+  background-position: center bottom;
+  border-radius: 20px;
+  overflow: clip;
+}
+
+@media (width >= calc(700 / 16 * 1rem)) {
+  .current__weather {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("/assets/images/bg-today-large.svg");
+    padding-block: 83px;
+  }
+}
+
+.current__location {
+  text-align: center;
+}
+
+.current__city {
+  font-size: var(--font-size-city);
+  font-weight: 700;
+  margin-block-end: 12px;
+}
+
+.current__date {
+  font-size: var(--font-size-date);
+  color: var(--color-text-med-light);
+}
+
+.current__info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.current__icon {
+  width: 120px;
+  height: auto;
+}
+
+.current__temp {
+  font-size: var(--font-size-temp);
+  line-height: 1;
+  letter-spacing: -2%;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.current__conditions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (width >= calc(700 / 16 * 1rem)) {
+  .current__conditions {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.current__condition {
+  padding: 20px;
+}
+
+.current__condition-title {
+  font-size: var(--font-size-panel-title);
+  color: var(--color-text-med-light);
+  margin-block-end: 24px;
+}
+
+.current__condition-value {
+  font-size: var(--font-size-panel-value);
+  font-weight: 300;
+}

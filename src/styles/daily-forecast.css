@@ -1,0 +1,49 @@
+.daily {
+  grid-area: daily;
+}
+
+.daily__title {
+  font-size: var(--font-size-forecast-title);
+  margin-block-end: 20px;
+}
+
+.daily__forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  min-height: calc(166 / 16 * 1rem);
+}
+
+@media (width >= calc(700 / 16 * 1rem)) {
+  .daily__forecast {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.daily__day {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 16px 10px;
+  text-align: center;
+}
+
+.daily__title {
+  font-size: var(--font-size-forecast-day);
+}
+
+.daily__-icon {
+  width: 60px;
+  height: auto;
+}
+
+.daily__temps {
+  justify-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-forecast-temp);
+}
+
+.daily__-low {
+  color: var(--color-text-med-light);
+}

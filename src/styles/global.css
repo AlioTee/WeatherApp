@@ -1,0 +1,193 @@
+@layer global {
+  /* dm-sans-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/assets/fonts/dm-sans-v17-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/assets/fonts/dm-sans-v17-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/assets/fonts/dm-sans-v17-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-600italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: italic;
+    font-weight: 600;
+    src: url("/assets/fonts/dm-sans-v17-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/dm-sans-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* bricolage-grotesque-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Bricolage Grotesque";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/bricolage-grotesque-v9-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  :root {
+    --c-neutral-900: hsl(243, 96%, 9%);
+    --c-neutral-800: hsl(243, 27%, 20%);
+    --c-neutral-700: hsl(243, 23%, 24%);
+    --c-neutral-600: hsl(243, 23%, 30%);
+    --c-neutral-300: hsl(240, 6%, 70%);
+    --c-neutral-200: hsl(250, 6%, 84%);
+    --c-neutral-0: hsl(0, 0%, 100%);
+    --c-orange-500: hsl(28, 100%, 52%);
+    --c-blue-500: hsl(233, 67%, 56%);
+    --c-blue-700: hsl(248, 70%, 36%);
+
+    --color-main-bg: var(--c-neutral-900);
+    --color-text-light: var(--c-neutral-0);
+    --color-text-med-light: var(--c-neutral-200);
+    --color-panel-bg-dark: var(--c-neutral-800);
+    --color-panel-bg-dark-hover: var(--c-neutral-700);
+    --color-panel-bg-med: var(--c-neutral-700);
+    --color-panel-bg-light: var(--c-neutral-600);
+    --color-panel-border: var(--c-neutral-600);
+    --color-button-bg: var(--c-blue-500);
+    --color-button-bg-hover: var(--c-blue-700);
+
+    --fs-84: calc(84 / 16 * 1rem);
+    --fs-46: calc(46 / 16 * 1rem);
+    --fs-28: calc(28 / 16 * 1rem);
+    --fs-24: calc(24 / 16 * 1rem);
+    --fs-18: calc(18 / 16 * 1rem);
+    --fs-14: calc(14 / 16 * 1rem);
+    --fs-13: calc(13 / 16 * 1rem);
+    --fs-12: calc(12 / 16 * 1rem);
+
+    --font-size-h1: var(--fs-46);
+    --font-size-dropdown: var(--fs-14);
+    --font-size-search: var(--fs-18);
+    --font-size-city: var(--fs-24);
+    --font-size-date: var(--fs-14);
+    --font-size-temp: var(--fs-84);
+    --font-size-panel-title: var(--fs-14);
+    --font-size-panel-value: var(--fs-28);
+    --font-size-forecast-title: var(--fs-18);
+    --font-size-forecast-day: var(--fs-14);
+    --font-size-forecast-temp: var(--fs-13);
+    --font-size-forecast-dropdown: var(--fs-13);
+    --font-size-forecast-hour: var(--fs-28);
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      --font-size-dropdown: var(--fs-13);
+    }
+  }
+
+  #root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  body {
+    background-color: var(--c-neutral-800);
+    color: var(--color-text-light);
+    font-family: "DM Sans", sans-serif;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .app-window {
+    --window-width: calc(1040 / 16 * 1rem);
+    
+    width: 100%;
+    max-width: var(--window-width);
+    background-color: var(--color-main-bg);
+    border-radius: 6px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr calc(100% - 64px) 1fr;
+  }
+
+ @media (width < calc(700 / 16 * 1rem)) {
+   body {
+     padding: 0;
+   }
+
+   .app-window {
+     border-radius: 0;
+     box-shadow: none;
+   }
+ }
+
+  .wrapper > * {
+    grid-column: 2;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.main {
+  display: grid;
+  row-gap: 32px;
+}
+
+.block {
+  background-color: var(--color-panel-bg-dark);
+  border: 1px solid var(--color-panel-border);
+  border-radius: 6px;
+}
+
+.section__title {
+  font-size: var(--font-size-forecast-title);
+  font-weight: 600;
+}

@@ -1,0 +1,70 @@
+.hourly {
+  grid-area: hourly;
+  position: relative;
+}
+
+.hourly__content {
+  background-color: var(--color-panel-bg-dark);
+  border-radius: 20px;
+  padding: 20px 16px;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+@media (width >= calc(1000 / 16 * 1rem)) {
+  .hourly__content {
+    position: absolute;
+    height: 100%;
+    max-height: none;
+  }
+}
+
+.hourly__header {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 16px;
+}
+
+.hourly__title {
+  font-size: var(--font-size-forecast-title);
+  font-weight: 600;
+}
+
+.hourly__select {
+  background-color: var(--color-panel-bg-med);
+  width: auto;
+  padding: 8px 16px;
+}
+
+.hourly__hours {
+  display: grid;
+  gap: 16px;
+}
+
+.hourly__hour {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 16px 10px 12px;
+  background-color: var(--color-panel-bg-med);
+  border: 1px solid var(--color-panel-border);
+  border-radius: 8px;
+  min-height: calc(60 / 16 * 1rem);
+}
+
+.hourly__icon {
+  width: 40px;
+  height: auto;
+}
+
+.hourly__time {
+  font-size: var(--font-size-forecast-hour);
+}
+
+.hourly__temp {
+  font-size: var(--font-size-forecast-temp);
+  justify-self: end;
+}
