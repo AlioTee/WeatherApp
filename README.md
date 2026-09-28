@@ -1,5 +1,7 @@
 # Weather App
 
+<img width="868" height="597" alt="Preview" src="https://github.com/user-attachments/assets/4f316a17-8434-47d4-b1d7-bef18ac2cf20" />
+
 A polished weather dashboard built with React and TypeScript. This project lets users search for a location, view the current conditions, switch between temperature units, and explore hourly and daily forecasts in a clean, responsive interface.
 
 ## Overview
